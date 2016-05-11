@@ -4,16 +4,13 @@
 	<title></title>
 	<script src="main/main.js"></script>
 	<style type="text/css">
-    .main td{
-    	border:1px solid black;
 
-    }
 
 	</style>
 </head>
 <body>
 <script>
-	
+
 var myArr=[1];
 myArr[0]=1;
 myArr[1]=2;
@@ -33,7 +30,7 @@ var mySecondArr=[1,2,3,4]
 // 	}
 // };
 // document.write(insan.ad)
-// document.write(insan.soyad) 
+// document.write(insan.soyad)
 
 // insan.yas(2016)
 // Обращаемся к объекту от имени вар к котегории
@@ -63,7 +60,7 @@ var mySecondArr=[1,2,3,4]
    // };
    // var Efqan=new adam ("Efqan","Elevsetoglu",15);
    // Efqan.call();
-  
+
     // Отдельно даем функцие котегорию.В Вар имя
  //     telebe = function(ad){
  //     	this.name=ad,
@@ -84,6 +81,11 @@ var mySecondArr=[1,2,3,4]
 
  // Строим имена и таблицы
 
+// для for
+var adlar=["Samir","Nicat","Orxan","Vahid","Seyid","Qurban","Turan"];
+var soyadlar=["Memmedov","SHabazli","Zamanli","Salmanli","Farmanli","qurbanli","Ibrahim"];
+var neticeleri=[49,67,45,67,46,78,45];
+// для for
     var telebe=function(ad,soyad,imtahanNeticesi){
     	this.ad=ad,
     	this.soyad=soyad,
@@ -99,19 +101,40 @@ var mySecondArr=[1,2,3,4]
            this.ekrandaYaz=function(){
            	document.write('<div class="main">');
            	document.write('<h4>'+ this.ad +'</h4>');
-           	document.write('<table>');
+           	document.write('<table border=1;style>');
            	document.write('<tr><td>Ad</td><td>Soyad</td><td>netice</td></tr>');
            	document.write('<tr><td>' +this.ad+ '</td><td>' +this.soyad+ '</td><td>'+this.netice()+'</td></tr>');
            	document.write('</table>');
            	document.write('</div>')
            }
-          
 
-
-    
     }
-    var telebe1=new telebe("Sabina","Jabrayil",70)
-    telebe1.ekrandaYaz()
+
+    //    var telebe1=new telebe("Sabina","Jabrayil",70)
+    // telebe1.ekrandaYaz()
+    // var telebe1=new telebe("Sabrina","Jabrayilova",40)
+    // telebe1.ekrandaYaz()
+    // var telebe1=new telebe("Samira","Aslanova",70)
+    // telebe1.ekrandaYaz()
+    // var telebe1=new telebe("Samra","Abdullayeva",20)
+    // telebe1.ekrandaYaz()
+
+
+     // период повторения можно записатть при прмощи for
+
+  for (var i = 0; i<adlar.length; i++) {
+      
+      var telebe1=new telebe(adlar[i],soyadlar[i],neticeleri[i])
+      telebe1.ekrandaYaz();
+
+
+    }
+
+
+
+
+
+
 
 
 </script>
