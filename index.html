@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="main/main.js"></script>
+	<style type="text/css">
+    .main td{
+    	border:1px solid black;
+
+    }
+
+	</style>
+</head>
+<body>
+<script>
+	
+var myArr=[1];
+myArr[0]=1;
+myArr[1]=2;
+myArr[5]=6;
+
+var mySecondArr=[1,2,3,4]
+
+// Объект
+
+// var insan={
+// 	ad:"Arzu",
+// 	soyad:"Memmedli",
+// 	dogumIli:1996,
+// 		yas:function(gununTarixi){
+// 			document.write(gununTarixi-insan.dogumIli);
+// 			// document.write(insan.ad+""+insan.soyad)
+// 	}
+// };
+// document.write(insan.ad)
+// document.write(insan.soyad) 
+
+// insan.yas(2016)
+// Обращаемся к объекту от имени вар к котегории
+   // 1 способ
+// var dogumIli={
+// 	Sabina:1992,
+// 	Arzu:1994,
+// 	Ismail:1990,
+// 	yas:function(Tarix){
+// 		document.write(Tarix-dogumIli.Sabina +"<br>")
+// 		document.write(Tarix-dogumIli.Arzu +"<br>")
+// 		document.write(Tarix-dogumIli.Ismail )
+// 	}
+// };
+// document.write(dogumIli.Sabina)
+
+   // 2 способ(заключим в иаблицу все наши критерии)
+
+   // var adam=function(name,surename,age){
+   // 	this.name=name,
+   // 	this.surename=surename,
+   // 	this.age=age,
+   // 	this.call=function(){
+   // 		document.write(this.name +" "+
+   // 			this.surename);
+   // 	}
+   // };
+   // var Efqan=new adam ("Efqan","Elevsetoglu",15);
+   // Efqan.call();
+  
+    // Отдельно даем функцие котегорию.В Вар имя
+ //     telebe = function(ad){
+ //     	this.name=ad,
+ //     	this.alert=function(){
+ //     		alert(this.name + " Abdullayev ");
+ //     	}
+ //     	this.fullname= function(){
+ //     		alert(this.name + " Jabrail ");
+ //     	}
+ //     	this.full= function(){
+ //     		alert(this.name + " Mammedov ");
+ //     }
+ // }
+ //     var telebe1 = new telebe("Nicat");
+ //     var telebe2 = new telebe("Sabina");
+ //     var telebe3 = new telebe("Ismail");
+ //     telebe2.fullname();
+
+ // Строим имена и таблицы
+
+    var telebe=function(ad,soyad,imtahanNeticesi){
+    	this.ad=ad,
+    	this.soyad=soyad,
+    	this.imtahanNeticesi=imtahanNeticesi,
+    	this.netice=function(){
+    		a=this.imtahanNeticesi
+    		if(a<50){
+    		return "kesildin";
+           }else{
+           	return "kecdin";
+           }
+           }
+           this.ekrandaYaz=function(){
+           	document.write('<div class="main">');
+           	document.write('<h4>'+ this.ad +'</h4>');
+           	document.write('<table>');
+           	document.write('<tr><td>Ad</td><td>Soyad</td><td>netice</td></tr>');
+           	document.write('<tr><td>' +this.ad+ '</td><td>' +this.soyad+ '</td><td>'+this.netice()+'</td></tr>');
+           	document.write('</table>');
+           	document.write('</div>')
+           }
+          
+
+
+    
+    }
+    var telebe1=new telebe("Sabina","Jabrayil",70)
+    telebe1.ekrandaYaz()
+
+
+</script>
+
+
+</body>
+</html>
